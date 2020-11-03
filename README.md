@@ -1,5 +1,5 @@
 # GZCLP-Tracker
-(Made in Summer of 2020)
+(Started in Summer of 2020)
 
 (Object Oriented Overhaul Coming Soon)
 
