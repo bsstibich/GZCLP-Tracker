@@ -1,30 +1,20 @@
-import json
-from json import JSONEncoder
 
 class Lift():
-	def __init__(self):
+	def __init__(self, name = "", tier = 1, sets = 5, reps = 3, weight = 25, prog = 5):
 
-		self._name = "OHP"
-		self._tier = 2
-		self._sets = 5
-		self._reps = 3
+		self._name = name
+		self._tier = tier
+		self._sets = sets
+		self._reps = reps
 
-		_weight_progression = 5
+		self._weight = weight
 
-	#def loadFile(self):
-		#file = open('lifts.json', 'r')
-		#self = json.load(file)
-		#file.close()
+		self._weight_progression = prog
 
-	def saveFile(self):
-		file = open('lifts.json', 'w')
-		json.dump(self.to_json(), file)
-		file.close()
+#########################################Load and save Lifts, put in another class. Maybe the menu class
+#with open('lifts.swole', 'wb') as file:
+	#pickle.dump(lift, file)
 
-	def to_json(self):
-		return json.dumps(self, default=lambda o: o.__dict__) 
-
-
-lift = Lift()
-lift.saveFile()
+#with open('lifts.swole', 'rb') as file:
+	#lift = pickle.load(file)
 
