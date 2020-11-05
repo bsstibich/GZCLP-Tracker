@@ -11,10 +11,21 @@ class Lift():
 
 		self._prog = prog
 
-#########################################Load and save Lifts, put in another class. Maybe the menu class
-#with open('lifts.swole', 'wb') as file:
-	#pickle.dump(lift, file)
+	def prog_reprange(self):
+		if self._sets == 5:
+			self._sets = 6
+			self._reps = 2
+		elif self._sets == 6:
+			self._sets = 10
+			self._reps = 1
+		elif self._sets == 10:
+			#update weight
+		elif self._sets == 3 and self._reps == 10:
+			self._reps = 8
+		elif self._sets == 3 and self._reps == 8:
+			self._reps = 6
+		elif self._sets == 3 and self._reps == 6:
+			#update weight
 
-#with open('lifts.swole', 'rb') as file:
-	#lift = pickle.load(file)
+
 
