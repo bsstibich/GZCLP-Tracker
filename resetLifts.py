@@ -18,7 +18,7 @@ lifts = {'1': {'Squat': sq1,'Bench Press': bp1,'Overhead Press': ohp1,'Deadlift'
 
 with open('lifts.swole', 'wb') as file: #save
 	pickle.dump(lifts, file)
-
+print("Lifts Reset.")
 #with open('lifts.swole', 'rb') as file: #load
 	#lift = pickle.load(file)
 
