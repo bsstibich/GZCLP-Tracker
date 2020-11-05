@@ -14,12 +14,10 @@ dl2 = Lift("Deadlift", 2, 3, 10, 250, 10)
 row2 = Lift("Row", 2, 3, 10, 150, 5)
 
 
-t1lifts = {'sq': sq1,'bp': bp1,'ohp': ohp1,'dl': dl1,'row': row1}
-t2lifts = {'sq': sq2,'bp': bp2,'ohp': ohp2,'dl': dl2,'row': row2}
+lifts = {'t1': {'sq': sq1,'bp': bp1,'ohp': ohp1,'dl': dl1,'row': row1}, 't2':{'sq': sq2,'bp': bp2,'ohp': ohp2,'dl': dl2,'row': row2}}
 
 with open('lifts.swole', 'wb') as file: #save
-	pickle.dump(t1lifts, file)
-	pickle.dump(t2lifts, file)
+	pickle.dump(lifts, file)
 
 #with open('lifts.swole', 'rb') as file: #load
 	#lift = pickle.load(file)

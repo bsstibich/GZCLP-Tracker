@@ -9,7 +9,7 @@ class Lift():
 
 		self._weight = weight
 
-		self._weight_progression = prog
+		self._prog = prog
 
 #########################################Load and save Lifts, put in another class. Maybe the menu class
 #with open('lifts.swole', 'wb') as file:
