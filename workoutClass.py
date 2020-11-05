@@ -23,11 +23,20 @@ class Workout():
 			else:
 				print('\nInvalid Input')
 			setCounter += 1
-		#save here
+		self.save(lift)
+
+	def save(self, lift):
+		with open('lifts.swole', 'rb') as file: #load
+			full_lifts = pickle.load(file)
+
+		full_lifts[str(lift._tier)][lift._name] = lift
+
+		with open('lifts.swole', 'wb') as file: #save
+			pickle.dump(full_lifts, file)
 
 
 with open('lifts.swole', 'rb') as file:
 	lifts = pickle.load(file)
-
-workout = Workout(lifts['t1']['sq'], lifts['t2']['bp'])
+print(lifts['2']['Squat']._weight)
+workout = Workout(lifts['1']['Squat'], lifts['2']['Bench Press'])
 workout.session(workout._t2)
