@@ -2,13 +2,14 @@ from liftClass import Lift
 import pickle
 
 class Workout():
-	def __init__(self, t1, t2):
+	def __init__(self, t1, t2, day):
 		self._t1 = t1
 		self._t2 = t2
+		self._day = day
 
 	def session(self, lift): #works for both tier 1 and tier 2 lifts
 		setCounter = 1
-		print(f"\nWorkout Day 1:\n==============\nLets start with Tier {lift._tier} {lift._name}! Do {lift._sets} sets of {lift._reps} reps at {lift._weight} lbs.")
+		print(f"\nWorkout Day {self._day}:\n==============\nLets start with Tier {lift._tier} {lift._name}! Do {lift._sets} sets of {lift._reps} reps at {lift._weight} lbs.")
 		while setCounter <= lift._sets: #loop to repeat set checker until sets are complete 
 			inp = input(f'\nWere you able to finish set {setCounter}? (Y/N)  ') 
 			if setCounter == lift._sets and inp.lower() == 'y': #ends loop and workout
@@ -23,7 +24,7 @@ class Workout():
 					lift.prog_reprange()
 					break
 			else:
-				print('\nInvalid Input')
+				print('\n\'Ey don\'t do dat.')
 			
 		self.save(lift)
 
@@ -40,9 +41,3 @@ class Workout():
 
 
 
-#testing code
-with open('lifts.swole', 'rb') as file:
-	lifts = pickle.load(file)
-print(lifts['2']['Squat']._weight)
-workout = Workout(lifts['1']['Squat'], lifts['2']['Bench Press'])
-workout.session(workout._t2)
