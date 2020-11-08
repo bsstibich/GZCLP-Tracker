@@ -9,7 +9,7 @@ row1 = Lift("Row", 1, 5, 3, 215, 5)
 
 sq2 = Lift("Squat", 2, 3, 10, 215, 10)
 bp2 = Lift("Bench Press", 2, 3, 10, 150, 5)
-ohp2 = Lift("Overhead Press", 3, 10, 3, 100, 5)
+ohp2 = Lift("Overhead Press", 3, 3, 10, 100, 5)
 dl2 = Lift("Deadlift", 2, 3, 10, 250, 10)
 row2 = Lift("Row", 2, 3, 10, 150, 5)
 
