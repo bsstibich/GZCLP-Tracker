@@ -72,114 +72,91 @@ class Menu():
 						elif ans3 == '1':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 squat
+								lifts['1']['Squat'].change_weight()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 squat
+								lifts['2']['Squat'].change_weight()
 							else:
 								print("Invalid Input")
 						elif ans3 == '2':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 bench
+								lifts['1']['Bench Press'].change_weight()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 bench
+								lifts['2']['Bench Press'].change_weight()
 							else:
 								print("Invalid Input")
 						elif ans3 == '3':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 ohp
+								lifts['1']['Overhead Press'].change_weight()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 ohp
+								lifts['2']['Overhead Press'].change_weight()
 							else:
 								print("Invalid Input")
 						elif ans3 == '4':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 dl
+								lifts['1']['Deadlift'].change_weight()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 dl
+								lifts['2']['Deadlift'].change_weight()
 							else:
 								print("Invalid Input")
 						elif ans3 == '5':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 row
+								lifts['1']['Row'].change_weight()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 row
+								lifts['2']['Row'].change_weight()
 							else:
 								print("Invalid Input")
 					#Change Repranges
 					elif ans2 == '2':
 						self.clear()
-						print("\nWhat lift's weight would you like to change?\n============================================\n0. Return to previous menu\n1. Squat\n2. Bench Press\n3. Overhead Press\n4. Deadlift\n5. Barbell Rows\n")
+						print("\nWhat lift's reprange would you like to change?\n============================================\n0. Return to previous menu\n1. Squat\n2. Bench Press\n3. Overhead Press\n4. Deadlift\n5. Barbell Rows\n")
 						ans3 = input("What would you like to do? ")
 						if ans3 == '0':
 							break
 						elif ans3 == '1':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 squat
+								lifts['1']['Squat'].change_reprange()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 squat
+								lifts['2']['Squat'].change_reprange()
 							else:
 								print("Invalid Input")
 						elif ans3 == '2':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 bench
+								lifts['1']['Bench Press'].change_reprange()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 bench
+								lifts['2']['Bench Press'].change_reprange()
 							else:
 								print("Invalid Input")
 						elif ans3 == '3':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 ohp
+								lifts['1']['Bench Press'].change_reprange()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 ohp
+								lifts['2']['Overhead Press'].change_reprange()
 							else:
 								print("Invalid Input")
 						elif ans3 == '4':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 dl
+								lifts['1']['Deadlift'].change_reprange()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 dl
+								lifts['2']['Deadlift'].change_reprange()
 							else:
 								print("Invalid Input")
 						elif ans3 == '5':
 							ans4 = input("Tier 1 or 2? ")
 							if ans4 == '1':
-								pass
-								#changeweight t1 row
+								lifts['1']['Row'].change_reprange()
 							elif ans4 == '2':
-								pass
-								#changeweight t2 row
+								lifts['2']['Row'].change_reprange()
 							else:
 								print("Invalid Input")
 					else:
 						print("Invalid Input")
-
-
-				
 			else:
 				print("Invalid Input")	

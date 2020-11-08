@@ -1,3 +1,4 @@
+import pickle
 
 class Lift():
 	def __init__(self, name = "", tier = 1, sets = 5, reps = 3, weight = 25, prog = 5):
@@ -33,20 +34,33 @@ class Lift():
 			self._reps = 10
 			print(f'\nNext time you do this exercise you\'ll do {self._sets} sets of {self._reps} reps at {self._weight} lbs.')
 		else:
-			print("It seems you've set a custome reprange, so automatic progression is not an option.")
+			print("It seems you've set a custom reprange, so automatic progression is not an option. ")
 
 	def change_weight(self):
-		new_weight = int(input(f'\nYour current weight for {self._name} is {self._weight}. What would you like your new working weight to be'))
+		new_weight = int(input(f'\nYour current weight for {self._name} is {self._weight}.\nWhat would you like your new working weight to be '))
 		self._weight = new_weight
-		#save?
+		full_lifts = self.load()
+		full_lifts[str(self._tier)][self._name]._weight = new_weight
+		self.save(full_lifts)
 
 	def change_reprange(self):
-		new_sets = int(input(f'\nYour current reprange for {self._name} is {self._sets} sets of {self._reps} reps. How many sets of would you like to start doing?'))
+		new_sets = int(input(f'\nYour current reprange for {self._name} is {self._sets} sets of {self._reps} reps.\nHow many sets of would you like to start doing? '))
 		new_reps = int(input('\nHow many reps would you like to do in each set?'))
 		self._reps = new_reps
 		self._sets = new_sets
-		#save?
+		full_lifts = self.load()
+		full_lifts[str(self._tier)][self._name]._reps = new_reps
+		full_lifts[str(self._tier)][self._name]._sets = new_sets
+		self.save(full_lifts)
+	
+	def load(self):
+		with open('lifts.swole', 'rb') as file: #load
+			full_lifts = pickle.load(file)
+		return full_lifts
 
+	def save(self,full_lifts):
+		with open('lifts.swole', 'wb') as file: #save
+			pickle.dump(full_lifts, file)
 
 
 

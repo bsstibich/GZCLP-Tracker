@@ -22,7 +22,7 @@ class Workout():
 				inp = input('\nDon\'t sweat it! Would you like to adjust your rep-range? (Y/N) ')
 				if inp.lower() == 'y':
 					lift.fail_lift()
-					break
+				break
 			else:
 				print('\n\'Ey don\'t do dat.')
 			
