@@ -53,6 +53,40 @@ class Lift():
 		full_lifts[str(self._tier)][self._name]._sets = new_sets
 		self.save(full_lifts)
 	
+
+	def plate_picker(self):
+		weight = self._weight - 45 #bar weight will be modifiable in future versions
+		plates = {"45":0, "35":0, "25":0, "10":0, "5":0,"2.5":0}
+		
+		while weight > 0:
+			if weight >= 90:
+				plates["45"] += 1
+				weight -= 90
+				pass
+			elif weight >= 70:
+				plates["35"] += 1
+				weight -= 70
+				pass
+			elif weight >= 50:
+				plates["25"] += 1
+				weight -= 50
+				pass
+			elif weight >= 20:
+				plates["10"] += 1
+				weight -= 20
+				pass
+			elif weight >= 10:
+				plates["5"] += 1
+				weight -= 10
+				pass
+			elif weight >=5:
+				plates["2.5"] += 1
+				weight -= 5
+				pass
+		print(plates)
+
+
+
 	def load(self):
 		with open('lifts.swole', 'rb') as file: #load
 			full_lifts = pickle.load(file)

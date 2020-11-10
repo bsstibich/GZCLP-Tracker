@@ -10,6 +10,7 @@ class Workout():
 	def session(self, lift): #works for both tier 1 and tier 2 lifts
 		setCounter = 1
 		print(f"\nWorkout Day {self._day}:\n==============\nLets do tier {lift._tier} {lift._name}! Do {lift._sets} sets of {lift._reps} reps at {lift._weight} lbs.")
+		lift.plate_picker()
 		while setCounter <= lift._sets: #loop to repeat set checker until sets are complete 
 			inp = input(f'\nWere you able to finish set {setCounter}? (Y/N)  ') 
 			if setCounter == lift._sets and inp.lower() == 'y': #ends loop and workout

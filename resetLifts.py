@@ -1,7 +1,7 @@
 from liftClass import Lift
 import pickle
 
-sq1 = Lift("Squat", 1, 5, 3, 305, 10)
+sq1 = Lift("Squat", 1, 5, 3, 315, 10)
 bp1 = Lift("Bench Press", 1, 5, 3, 215, 5)
 ohp1 = Lift("Overhead Press", 1, 5, 3, 125, 5)
 dl1 = Lift("Deadlift", 1, 5, 3, 395, 10)
