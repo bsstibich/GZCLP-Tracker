@@ -58,7 +58,6 @@ class Lift():
 		full_weights = self.load()
 		weight = self._weight - (full_weights['bar'])
 		plates = {"45":0, "35":0, "25":0, "10":0, "5":0,"2.5":0}
-		
 		while weight > 0:
 			if weight >= 90:
 				plates["45"] += 1
@@ -84,7 +83,11 @@ class Lift():
 				plates["2.5"] += 1
 				weight -= 5
 				pass
-		print(plates)
+		print("Weights On Each Side: ")
+		for plate in plates:
+			if plates[plate] > 0:
+				print(f"\t{plates[plate]}x{plate}lbs")
+
 
 
 
