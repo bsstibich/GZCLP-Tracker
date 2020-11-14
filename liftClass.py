@@ -55,7 +55,8 @@ class Lift():
 	
 
 	def plate_picker(self):
-		weight = self._weight - 45 #bar weight will be modifiable in future versions
+		full_weights = self.load()
+		weight = self._weight - (full_weights['bar'])
 		plates = {"45":0, "35":0, "25":0, "10":0, "5":0,"2.5":0}
 		
 		while weight > 0:

@@ -58,7 +58,7 @@ class Menu():
 				settings = 0
 				while settings == 0:
 					self.clear()
-					print("\nSettings Menu\n=============\nWhat would you like to change?\n0. Return to previous menu\n1. Change weight of a lift\n2. Change reprange of a lift")
+					print("\nSettings Menu\n=============\nWhat would you like to change?\n0. Return to previous menu\n1. Change weight of a lift\n2. Change reprange of a lift\n3. Change weight of bar")
 					ans2 = input("\nWhat would you like to do? ")
 					if ans2 == '0':
 						break
@@ -156,6 +156,10 @@ class Menu():
 								lifts['2']['Row'].change_reprange()
 							else:
 								print("Invalid Input")
+					elif ans2 == '3':
+						self.clear()
+						lifts['bar'] = input("What weight is your barbell? ")
+						lifts['1']['Squat'].save(lifts)
 					else:
 						print("Invalid Input")
 			else:
