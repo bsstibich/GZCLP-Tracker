@@ -20,7 +20,7 @@ class Menu():
 		run = 0
 		while run == 0:
 			self.clear() 
-			print("\nWelcome to GZCLP tracker!\n=========================\n0. Close Program\n1. Start Workout Day 1 (Tier 1 Squat, Tier 2 Bench Press)\n2. Start Workout Day 2 (Tier 1 Overhead Press, Tier 2 Deadlift)\n3. Start Workout Day 3 (Tier 1 Bench Press, Tier 2 Squat)\n4. Start Workout Day 4 (Tier 1 Deadlift, Tier 2 Overhead Press)\n5. Print Lifts\n6. Settings")
+			print(f"\nWelcome to GZCLP tracker!\nLast time you did Workout Day {lifts['prev']}.\n=========================\n0. Close Program\n1. Start Workout Day 1 (Tier 1 Squat, Tier 2 Bench Press)\n2. Start Workout Day 2 (Tier 1 Overhead Press, Tier 2 Deadlift)\n3. Start Workout Day 3 (Tier 1 Bench Press, Tier 2 Squat)\n4. Start Workout Day 4 (Tier 1 Deadlift, Tier 2 Overhead Press)\n5. Print Lifts\n6. Settings")
 			ans = input("\nWhat would you like to do? ")
 			if ans=='0':
 				run = 99
@@ -29,21 +29,29 @@ class Menu():
 				workout = Workout(lifts['1']['Squat'], lifts['2']['Bench Press'],1)
 				workout.session(workout._t1)
 				workout.session(workout._t2)
+				lifts['prev'] = 1
+				lifts['1']['Squat'].save(lifts)
 			elif ans=='2':
 				self.clear()
 				workout = Workout(lifts['1']['Overhead Press'], lifts['2']['Row'],2)
 				workout.session(workout._t1)
 				workout.session(workout._t2)
+				lifts['prev'] = 2
+				lifts['1']['Squat'].save(lifts)
 			elif ans=='3':
 				self.clear()
 				workout = Workout(lifts['1']['Bench Press'], lifts['2']['Squat'],3)
 				workout.session(workout._t1)
 				workout.session(workout._t2)
+				lifts['prev'] = 3
+				lifts['1']['Squat'].save(lifts)
 			elif ans=='4':
 				self.clear()
 				workout = Workout(lifts['1']['Row'], lifts['2']['Overhead Press'],4)
 				workout.session(workout._t1)
 				workout.session(workout._t2)
+				lifts['prev'] = 4
+				lifts['1']['Squat'].save(lifts)
 			elif ans=='5': #find way to make display despite the clear() in the main menu
 				self.clear()
 				print(f"\nTier 1 Squat {lifts['1']['Squat']._weight} lbs reprange {lifts['1']['Squat']._sets}x{lifts['1']['Squat']._reps}")
