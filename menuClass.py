@@ -157,8 +157,7 @@ class Menu():
 							else:
 								print("Invalid Input")
 					elif ans2 == '3':
-						self.clear()
-						lifts['bar'] = input("What weight is your barbell? ")
+						lifts['bar'] = input("\nWhat weight is your barbell? ")
 						lifts['1']['Squat'].save(lifts)
 					else:
 						print("Invalid Input")
