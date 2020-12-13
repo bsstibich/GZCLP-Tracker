@@ -83,7 +83,7 @@ class Lift():
 				plates["2.5"] += 1
 				weight -= 5
 				pass
-		print("Weights On Each Side: ")
+		print("\nWeights On Each Side: ")
 		for plate in plates:
 			if plates[plate] > 0:
 				print(f"\t{plates[plate]}x{plate} lbs")
