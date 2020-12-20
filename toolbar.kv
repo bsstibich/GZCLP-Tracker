@@ -1,0 +1,25 @@
+<ToolBarC@BoxLayout>:
+
+    MDToolbar:
+        md_bg_color: app.theme_cls.primary_color
+        #left_action_items: [['home', lambda x: app.root.changeScreen()]]
+
+        MDIconButton:
+            icon:'home'
+            elevation: 0
+            #md_bg_color: app.theme_cls.primary_color
+            user_font_size: "40sp"
+            on_release: app.root.current = 'hometab'
+        MDIconButton:
+            icon:'weight-lifter'
+            elevation: 0
+            #md_bg_color: app.theme_cls.primary_color
+            user_font_size: "40sp"
+            on_release: app.root.current = 'workouttab'
+        MDIconButton:
+            icon:'settings-outline'
+            elevation: 0
+            #md_bg_color: app.theme_cls.primary_color
+            user_font_size: "40sp"
+            text_color: app.theme_cls.primary_color
+            on_release: app.root.current = 'settingstab'

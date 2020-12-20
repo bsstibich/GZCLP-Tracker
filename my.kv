@@ -1,50 +1,32 @@
 #TODO
 #   change color of toolbar
 #   allign buttons where I want
+#:include toolbar.kv
+
 <HomeTab>:
     name: "hometab"
     BoxLayout:
         orientation: 'vertical'
         Label:
             text:"home"
-        MDToolbar:
-            md_bg_color: app.theme_cls.primary_color
-            #left_action_items: [['home', lambda x: root.manager.current = 'workouttab']]
+        ToolBarC:
 
-            MDIconButton:
-                icon:'home'
-                elevation: 0
-                md_bg_color: app.theme_cls.primary_color
-                user_font_size: "40sp"
-                set_pos_root_button:'left'
-                pos_hint: {"x":.25, "center_y": .5}
-                halign: "left"
-                #on_release:
-                    #root.manager.transition = 'NoTransition'
-                    #root.manager.current = 'workouttab'
-            MDIconButton:
-                icon:'weight-lifter'
-                elevation: 0
-                md_bg_color: app.theme_cls.primary_color
-                user_font_size: "40sp"
-                #on_release: root.manager.current = 'settingstab'
-            MDIconButton:
-                icon:'settings-outline'
-                elevation: 0
-                md_bg_color: app.theme_cls.primary_color
-                user_font_size: "40sp"
-                #on_release: root.manager.current = 'settingstab'
-            
-            
                 
-
 <WorkoutTab>:
     name: "workouttab"
-    Label:
-        text:"workout"
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text:"workout"
+        ToolBarC:
+
+        
 
 <SettingsTab>:
     name: "settingstab"
-    Label:
-        text:"settings"
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text:"settings"
+        ToolBarC:
 
