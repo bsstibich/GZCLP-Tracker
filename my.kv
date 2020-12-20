@@ -2,13 +2,13 @@
 #   change color of toolbar
 #   allign buttons where I want
 #:include toolbar.kv
+#:include home.kv
 
 <HomeTab>:
     name: "hometab"
     BoxLayout:
         orientation: 'vertical'
-        Label:
-            text:"home"
+        HomeLayout:
         ToolBarC:
 
                 
