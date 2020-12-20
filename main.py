@@ -7,9 +7,9 @@ from kivy.core.window import Window
 from kivymd.theming import ThemeManager
 
 
-kv = Builder.load_file("my.kv")
-Window.size = (360, 760) #s10+ scaled down
-#Window.size = (1440,3040)
+kv = Builder.load_file("kv files/main.kv")
+#Window.size = (360, 760) #s10+ scaled down
+Window.size = (1440,3040)
 
 
 class HomeTab(Screen):

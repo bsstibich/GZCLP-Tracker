@@ -1,0 +1,41 @@
+<HomeLayout@FloatLayout>:
+    Label:
+        text: "Welcome to the GZCLP Tracker!"
+        font_size: (root.width**2 + root.height**2) / 10.35**4
+        halign: 'center'
+        size_hint: 1,.2
+        pos_hint: {"x":0, "top": 1}
+    Label:
+        id: lasttime
+        text: "Last time you did:\nWorkout Day 1\n\nWhat would you like to do today?"
+        halign: 'center'
+        size_hint: 1,.001
+        font_size: (root.width**2 + root.height**2) / 11**4
+        pos_hint: {"x":0, "top": .70}
+        
+    FloatLayout:
+        pos_hint: {"x":0, "top": .4}
+        cols:1
+        Button:
+            text: 'Workout Day 1:\n\nTier 1: Squat\n\nTier 2: Bench Press\n3x8 150lbs'
+            halign: 'center'
+            size_hint: .45,.45
+            pos_hint: {'x':0.03, 'top':1}
+            on_press:
+                background_color: (.108, .114, .126, 1)
+        Button:
+            text: 'Workout Day 2:\n\nTier 1: Squat\n\nTier 2: Bench Press\n3x8 150lbs'
+            halign: 'center'
+            size_hint: .45,.45
+            pos_hint: {'x':0.53, 'top':1}
+        Button:
+            text: 'Workout Day 3:\n\nTier 1: Squat\n\nTier 2: Bench Press\n3x8 150lbs'
+            halign: 'center'
+            size_hint: .45,.45
+            pos_hint: {'x':0.03, 'top':.5}
+        Button:
+            text: 'Workout Day 4:\n\nTier 1: Squat\n\nTier 2: Bench Press\n3x8 150lbs'
+            halign: 'center'
+            size_hint: .45,.45
+            pos_hint: {'x':0.53, 'top':.5}
+        

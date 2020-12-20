@@ -1,8 +1,8 @@
 #TODO
 #   change color of toolbar
 #   allign buttons where I want
-#:include toolbar.kv
-#:include home.kv
+#:include kv files/toolbar.kv
+#:include kv files/home.kv
 
 <HomeTab>:
     name: "hometab"
@@ -10,8 +10,7 @@
         orientation: 'vertical'
         HomeLayout:
         ToolBarC:
-
-                
+               
 <WorkoutTab>:
     name: "workouttab"
     BoxLayout:
@@ -19,8 +18,6 @@
         Label:
             text:"workout"
         ToolBarC:
-
-        
 
 <SettingsTab>:
     name: "settingstab"
