@@ -4,7 +4,6 @@
         md_bg_color: (.108, .114, .126, 1)
         FloatLayout:
             
-            #left_action_items: [['home', lambda x: app.root.changeScreen()]]
 
             MDIconButton:
                 icon:'home'
@@ -18,7 +17,7 @@
                 #md_bg_color: app.theme_cls.primary_color
                 user_font_size: "40sp"
                 on_release: app.root.current = 'workouttab'
-                pos_hint:{'center_x':.03}
+                pos_hint:{'center_x':.02}
             MDIconButton:
                 icon:'settings-outline'
                 elevation: 0
