@@ -8,8 +8,8 @@ from kivymd.theming import ThemeManager
 
 
 kv = Builder.load_file("kv files/main.kv")
-#Window.size = (360, 760) #s10+ scaled down
-Window.size = (1440,3040)
+Window.size = (360, 760) #s10+ scaled down
+#Window.size = (1440,3040)
 
 
 class HomeTab(Screen):
