@@ -3,6 +3,8 @@
 #   allign buttons where I want
 #:include kv files/toolbar.kv
 #:include kv files/home.kv
+#:include kv files/workout.kv
+#:include kv files/settings.kv
 
 <HomeTab>:
     name: "hometab"
@@ -15,15 +17,13 @@
     name: "workouttab"
     BoxLayout:
         orientation: 'vertical'
-        Label:
-            text:"workout"
+        WorkoutLayout:
         ToolBarC:
 
 <SettingsTab>:
     name: "settingstab"
     BoxLayout:
         orientation: 'vertical'
-        Label:
-            text:"settings"
+        SettingsLayout:
         ToolBarC:
 
